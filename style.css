@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+/* --- Configurações de Escala e Globais --- */
+html {
+    font-size: 100%;
+}
+@media (max-width: 767px) {
+    html {
+        font-size: 75%;
+    }
+}
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f4f7f6;
+    background-image: url('https://www.transparenttextures.com/patterns/leafy-green.png');
+    color: #333;
+    margin: 0;
+    padding: 1.25rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+.container {
+    max-width: 900px;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(10px);
+    border-radius: 1.25rem;
+    padding: 1.875rem;
+    box-shadow: 0 0.5rem 2rem 0 rgba(31, 38, 135, 0.1);
+    text-align: center;
+}
+header h1 {
+    font-size: 1.5rem;
+    color: #2E7D32;
+    margin-bottom: 0.625rem;
+}
+.intro-text {
+    font-size: 1rem;
+    color: #555;
+    max-width: 400px;
+    margin: 0 auto 1.875rem auto;
+}
+.medal-case {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.25rem;
+    margin-bottom: 1.875rem;
+}
+.medal {
+    aspect-ratio: 1 / 1;
+    background-color: #e0e0e0;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 0.25rem solid #ffffff;
+    box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.05);
+    transition: all 0.4s ease;
+}
+.medal i {
+    font-size: 2.5rem;
+    color: #b0b0b0;
+    transition: all 0.4s ease;
+}
+.medal.collected {
+    box-shadow: 0 0.375rem 0.938rem rgba(0, 0, 0, 0.15);
+    transform: scale(1.05);
+}
+.medal.collected i {
+    color: #fff;
+}
+.medal:nth-child(1).collected { background: linear-gradient(135deg, #66BB6A, #43A047); }
+.medal:nth-child(2).collected { background: linear-gradient(135deg, #81C784, #388E3C); }
+.medal:nth-child(3).collected { background: linear-gradient(135deg, #AED581, #689F38); }
+.medal:nth-child(4).collected { background: linear-gradient(135deg, #4DB6AC, #00897B); }
+.medal:nth-child(5).collected { background: linear-gradient(135deg, #FFCA28, #FFA000); }
+.medal:nth-child(6).collected { background: linear-gradient(135deg, #4DD0E1, #00ACC1); }
+.medal:nth-child(7).collected { background: linear-gradient(135deg, #9575CD, #5E35B1); }
+.medal:nth-child(8).collected { background: linear-gradient(135deg, #F06292, #E91E63); }
+.medal:nth-child(9).collected { background: linear-gradient(135deg, #BA68C8, #8E24AA); }
+.medal:nth-child(10).collected { background: linear-gradient(135deg, #FF8A65, #F4511E); }
+
+.progress-section {
+    max-width: 400px;
+    margin: 0 auto;
+}
+.progress-bar-container {
+    width: 100%;
+    background-color: #e0e0e0;
+    border-radius: 1.25rem;
+    height: 0.938rem;
+    overflow: hidden;
+    margin-bottom: 0.625rem;
+}
+.progress-bar {
+    height: 100%;
+    background: linear-gradient(90deg, #66BB6A, #43A047);
+    border-radius: 1.25rem;
+    transition: width 0.5s ease-in-out;
+}
+.progress-text {
+    font-weight: 600;
+    color: #555;
+    font-size: 0.9rem;
+}
+@media (min-width: 768px) {
+    html {
+        font-size: 100%;
+    }
+    .medal-case {
+        grid-template-columns: repeat(5, 1fr);
+    }
+}
